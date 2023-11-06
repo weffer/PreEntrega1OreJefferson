@@ -1,11 +1,11 @@
 //Funcion General para seleccionar y validar las opciones a ejecutar
 function preEntrega1() {
   let memsaje =
-    "Seleccione una opción:\n1.- Calcular costo total de productos y/o servicios seleccionados por el usuario.\n2.- Calcular pagos en cuotas sobre un monto determinado.\n3.- Calcular valor final de un producto seleccionado en función de impuestos y descuentos.\n4.- Calcular tiempo de espera promedio en relación con la cantidad de turnos registrados.\n5.-Calcular edad promedio de personas registradas.";
+    "Seleccione una opción:\n1.- Calcular costo total de productos y/o servicios seleccionados por el usuario.\n2.- Calcular pagos en cuotas sobre un monto determinado.\n3.- Calcular valor final de un producto seleccionado en función de impuestos y descuentos.\n4.- Calcular tiempo de espera promedio en relación con la cantidad de turnos registrados.\n5.-Calcular edad promedio de personas registradas.\n6.-Cerrar Operacion!";
   let opcion = parseInt(prompt(memsaje));
 
   if (!isNaN(opcion)) {
-    if (opcion > 0 && opcion <= 5) {
+    if (opcion > 0 && opcion <= 6) {
       if (opcion == 1) {
         ejecutarOpcion1();
       } else if (opcion == 2) {
@@ -14,11 +14,13 @@ function preEntrega1() {
         ejecutarOpcion3();
       } else if (opcion == 4) {
         ejecutarOpcion4();
-      } else {
+      } else if (opcion == 5) {
         ejecutarOpcion5();
+      } else {
+        alert("Se cerro la operación!!!");
       }
     } else {
-      alert("Ingrese un numero correcto entre el 1 y 5");
+      alert("Ingrese un numero correcto entre el 1 y 6");
       preEntrega1();
     }
   } else {
